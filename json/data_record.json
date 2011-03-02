@@ -1,0 +1,23 @@
+{
+    "type": "DataRecord",
+    "class": "class.path.ClinicRecord",
+    "uuid": "32chr",
+    "entity_uuid": "points to entity 32chr uuid",
+    "created_at": "utc timestamp+tz",
+    "updated_at": "utc timestamp+tz",
+    "payload": [{
+            "timestamp": "ts utc+tz",
+            "value": 50,
+            "field": "nr_of_beds"
+        },
+        {
+            "timestamp": "ts utc+tz",
+            "value": "JAN",
+            "field": "report_month"
+        },
+        {
+            "timestamp": "ts utc+tz",
+            "value": [50, "A", "B"],
+            "field": "ARV"
+        }]
+}

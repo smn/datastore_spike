@@ -1,0 +1,10 @@
+{
+    "type": "Entity",
+    "class": "ClinicEntity",
+    "uuid": "32chr",
+    "created_at": "utc timestamp+tz",
+    "updated_at": "utc timestamp+tz",
+    "payload": {
+        "fields": ["code", "nr_of_beds", "arv_count", "patient_per_week"]
+    }
+}

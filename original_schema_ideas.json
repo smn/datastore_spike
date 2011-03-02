@@ -1,0 +1,55 @@
+// BaseRecord
+{
+    "type": "..",
+    "class": "...",
+    "uuid": "...",
+    "created_at": "...",
+    "updated_at": "...",
+}
+// Entity schema
+{
+    "type": "Entity",
+    "class": "class.path.Clinic",
+    "uuid": "32chr", // generate in application, look up why.
+    "created_at": "utc timestamp+tz",
+    "updated_at": "utc timestamp+tz",
+    "fields": ["code", "nr_of_beds","arv_count","patient_per_week"],        }
+},
+// Data record schema
+{
+    "type": "DataRecord",
+    "class": "class.path.ClinicRecord",
+    "uuid": "32chr",
+    "created_at": "utc timestamp+tz",
+    "updated_at": "utc timestamp+tz",
+    "entity_uuid": "points to entity 32chr uuid",
+    "payload": [
+        {
+            "timestamp": "ts utc+tz",
+            "field": "nr_of_beds",
+            "value": 50,
+        },
+        
+        {
+            "timestamp": "ts utc+tz",
+            "field": "report_month",
+            "value": "JAN",
+        },
+        {
+        
+            "timestamp": "ts utc+tz",
+            "field": "ARV",
+            "value": [50, 'A', 'B'],
+        },
+        {
+            "timestamp": "ts utc+tz",
+            "field": "code",
+            "value": "CL001",
+        }
+    ]
+}
+
+
+//1) Clinic --> no_of_bed, stock_count
+//2) Show me clinic in a particular area where number of bed>100
+//3) Report of monthly stock count on clinci CL01
